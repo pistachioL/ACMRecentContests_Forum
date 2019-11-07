@@ -11,13 +11,8 @@ spring:
     hibernate:
       ddl-auto: update
 
-  server:
-    port: 8082
-    tomcat:
-      uri-encoding: UTF-8
-      # 下面三行nginx转发tomcat配置
-      protocol-header: x-forwarded-proto
-    use-forward-headers: true
-    address: 127.0.0.1
+server:
+  port: 8082
+
 
   API: /api/v1
