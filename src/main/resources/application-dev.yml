@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/forum?useUnicode=true&characterEncoding=UTF-8&characterSetResults=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 11
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  server:
+    port: 8082
+    tomcat:
+      uri-encoding: UTF-8
+      # 下面三行nginx转发tomcat配置
+      protocol-header: x-forwarded-proto
+    use-forward-headers: true
+    address: 127.0.0.1
+
+  API: /api/v1
