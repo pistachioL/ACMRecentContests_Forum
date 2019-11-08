@@ -6,6 +6,6 @@ import team.huoguo.forum.bean.Forum;
 
 @Component
 public interface ForumRepository extends JpaRepository<Forum, String> {
-
+    Forum findAllById(String id);
 }
 

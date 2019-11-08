@@ -26,5 +26,10 @@ import java.util.List;
         return forumRepository.findAll();
     }
 
+    @GetMapping(value = "getDetail/{id}")
+    public Forum getDetail(@PathVariable String id) {   //获取详情页内容
+        return forumRepository.findAllById(id);
+    }
+
 
 }
