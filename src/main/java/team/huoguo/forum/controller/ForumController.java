@@ -13,8 +13,9 @@ import java.util.List;
  public class ForumController {
     @Autowired
     ForumRepository forumRepository;  //注入实例
-    @RequestMapping("postComment")
 
+//    @PostMapping("/postComment")
+@RequestMapping(value = "/postArticle", method = RequestMethod.POST)
     public Forum postForum(@RequestBody Forum forum){   //发送评论内容
             return forumRepository.save(forum);
 
